@@ -29,5 +29,6 @@
             </div>
             <hr>
         @endforeach
+        {{ $tweets->links() }}
     </div>
 @endsection

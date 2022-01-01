@@ -11,7 +11,8 @@ class TimelineController extends Controller
     //
         public function showTimelinePage()
     {
-        $tweets = Tweet::latest()->get();
+        //$tweets = Tweet::latest()->get();
+        $tweets = Tweet::latest()->paginate(5);
 
         return view('timeline', [
             'tweets' => $tweets,
