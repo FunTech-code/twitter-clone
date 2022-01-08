@@ -11,7 +11,8 @@
                         <a class="btn btn-primary" href="{{ route('register') }}">新規登録してツイートする</a>
                     </div>
                 @else
-                    {{ Form::text('tweet', null, ['class' => 'form-control col-9 mr-auto']) }}
+                    {{ Form::text('tweet', null, ['class' => 'form-control col-9 mr-auto','files' => true]) }}
+                    {{ Form::file('image', ['class'=>'custom-file-input','id'=>'fileImage']) }}
                     {{ Form::submit('ツイート', ['class' => 'btn btn-primary col-2']) }}
                 @endguest
             </div>
