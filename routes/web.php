@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user', 'UserController@showUserPage')->name('user');
+Route::post('/user', 'UserController@editUser')->name('editUser');
 
 Route::get('/timeline', 'TimelineController@showTimelinePage')->name('timeline');
 Route::post('/timeline', 'TimelineController@postTweet')->name('timeline');
